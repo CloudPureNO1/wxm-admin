@@ -1,0 +1,53 @@
+@import "./base.scss";
+@import "./layout.scss";
+ 
+  html,
+  body {
+    margin: 0 auto;
+    padding: 0;
+  }
+  ul {
+    li {
+      list-style: none;
+      overflow: hidden; //超出的文本隐藏
+      white-space: nowrap; //不换行
+    }
+  }
+  
+  fieldset {
+    border: solid 1px #c4d2e6;
+    padding: 10px;
+    min-width: auto;
+  }
+  
+  legend {
+    color: #409eff;
+    text-align: left;
+    margin-left: 15px;
+  }
+   
+
+  .el-overlay-message-box{
+    z-index: 99999999999;
+  }
+  
+  
+  /*
+        进入和离开动画可以使用不同
+        持续时间和速度曲线。
+      */
+   .slide-fade-enter-active {
+        transition: all 0.1s ease-out;
+    }
+    
+    .slide-fade-leave-active {
+        transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+    }
+    
+    .slide-fade-enter-from,
+    .slide-fade-leave-to {
+        transform: translateX(20px);
+        opacity: 0;
+    }
+
+
