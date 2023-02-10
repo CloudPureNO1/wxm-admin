@@ -115,8 +115,9 @@ const submitForm = async (formEl: FormInstance | undefined) => {
                 }
                 sessionStorage.setItem("accessToken", resp.data.data.accessToken);
 
+                console.log('>>>>>>>>>>>>>登录成功：',new Date())
                 
-                router.push("/")
+                router.push("/home")
             })
             .catch((err: any) => {
                 $wxmAlert(err.message || err, "提示", { type: "error" });

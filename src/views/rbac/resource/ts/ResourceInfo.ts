@@ -1,3 +1,4 @@
+import { testFn, transToLocale } from '../../../../composable/TransI18n'
 
 import { onMounted, ref, inject } from 'vue'
 import { isEmpty } from 'lodash'
@@ -9,13 +10,18 @@ import { useLayoutStore } from '../../../../store/layout'
 import { useRbacStore } from '../../../../store/rbac'
 import { usePostApi } from '../../../../composable/ApiBaseCall';
 import { wxmAlert } from '../../../../util/commFn'
-import { transToLocale } from '../../../../composable/TransI18n'
 export const layoutStore = useLayoutStore()
 export const rbacStore = useRbacStore()
+
+import { useI18n } from 'vue-i18n'
+
+
 
 // methods start
 
 export const init = () => {
+    const {t}=useI18n()
+
     const resourceId = ref<string>()
     const resourceFromRef = ref<any>()
     const { loadSourceTree } = inject('SourceTreeKey') as any
@@ -60,7 +66,9 @@ export const init = () => {
         if (!formEl) return
         await formEl.validate((valid, fields) => {
             if (!valid) {
-                let msg: string = transToLocale('Common.formVerificationInfo')
+                // let msg: string = t('Common.formVerificationInfo')
+                let msg: string = testFn(t,'Common.formVerificationInfo')
+                // let msg: string = transToLocale('Common.formVerificationInfo')
                 if (fields) {
                     msg += Object.values(fields).map(item => `【${item[0].message}】`).join(',')
                 }

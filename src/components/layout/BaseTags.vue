@@ -1,6 +1,7 @@
  
 <template>
-	<div class="base-tags wxm-grey">
+	
+	<div class="base-tags">
 		<!-- <el-scrollbar> -->
 		<el-tag v-for="tag in tags" :key="tag.name" effect="plain" class="base-tags_tag"
 			:closable="isClosable(tag.path)" :class="{ 'tag__is-active': isActive(tag.path) }"

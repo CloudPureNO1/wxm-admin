@@ -22,7 +22,7 @@
     "lodash": "^4.17.21",
     "nanoid": "^4.0.0",
     "node-sass": "^7.0.3",
-    "pinia": "^2.0.21",
+    "pinia": "^2.0.30",
     "qrcode-parser": "^2.0.4",
     "qrcode.vue": "^3.3.3",
     "qs": "^6.11.0",

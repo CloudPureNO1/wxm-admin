@@ -11,6 +11,8 @@ import {firstLetter2lowercase} from './StringTransform'
  * 外部ts 中使用方式
  */
 import i18n from '../i18n'
+
+
 const {t}=i18n.global
 
 /**
@@ -55,4 +57,8 @@ const {t}=i18n.global
    export const toLocalePleaseSelect=(msg:string)=>{
     return `${t('Common.pleaseSelect')} ${firstLetter2lowercase(t(msg))}`
   }
+ 
   
+  export const testFn=(fn:any,msg:string)=>{
+    return `${fn('Common.pleaseEnter')} ${firstLetter2lowercase(fn(msg))}`
+  }

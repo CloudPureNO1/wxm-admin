@@ -12,3 +12,4 @@
     //let id = nanoid(5)
  */
 
+export const test=''

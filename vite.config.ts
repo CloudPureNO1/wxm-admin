@@ -53,6 +53,8 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
+      // find: 'vue-i18n',
+      // replacement: 'vue-i18n/dist/vue-i18n.cjs.js', //解决i8n警告
     },
   },
 

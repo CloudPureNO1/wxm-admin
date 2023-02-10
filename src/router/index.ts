@@ -39,10 +39,10 @@ let ContentRouter: RouteRecordRaw[] = [
 ContentRouter=ContentRouter.concat(RbacRouter).concat(QuartzRouter).concat(DemoRouter)
 
 const BaseRouter: RouteRecordRaw[] = [
-  {
-    path: '/',
-    redirect: '/home',
-  },
+  // {
+  //   path: '/',
+  //   redirect: '/home',
+  // },
   {
     path: '/',
     name: 'Index',
